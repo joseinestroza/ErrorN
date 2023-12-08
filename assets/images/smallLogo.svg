@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="3840"
+   height="2160"
+   viewBox="0 0 3840 2160"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="part.svg"
+   inkscape:export-filename="logo.png"
+   inkscape:export-xdpi="16.1"
+   inkscape:export-ydpi="16.1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.31792788"
+     inkscape:cx="1814.877"
+     inkscape:cy="1061.5615"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:pageshadow="2"
+     showgrid="false" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 3" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="mix-blend-mode:exclusion;fill:none;stroke:#ff0066;stroke-width:324.187;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 2953.9906,695.63128 C 1303.8888,1622.7463 2568.6323,161.00999 818.16453,1119.3574"
+       id="path8"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <path
+       style="mix-blend-mode:exclusion;fill:none;stroke:#ff0066;stroke-width:324.187;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 2885.0098,1136.4778 C 1234.908,2063.5929 2499.6515,601.8566 749.1838,1560.204"
+       id="path8-9"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

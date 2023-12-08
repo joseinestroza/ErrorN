@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ErrorN</title>
+    <link rel="shortcut icon" href="assets/images/smallLogo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+        }
+
+        html{
+          overflow-x: hidden;
+          scroll-snap-type: y mandatory;
+        }
+
+        .cover{
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+
+            background: url(assets/images/background.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .full{
+            width: 100vw;
+            height: 100vh;
+            overflow-y: hidden;
+            scroll-snap-align: start;
+        }
+
+        .full-flexible-height{
+            width: 100vw;
+            min-height: 100vh;
+            overflow-y: hidden;
+            scroll-snap-align: start;
+        }
+
+        .text-indigo{
+
+            color: var(--bs-indigo);
+        }
+
+        .bg-indigo{
+
+            background-color: var(--bs-indigo);
+        }
+        
+        .display-0{
+          font-size: 4vw;
+        }
+
+        .bd-code-snippet{
+          background-color: var(--bd-pre-bg);
+        }
+
+        #goToTop {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 99;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 10px;
+          font-size: 18px;
+          opacity: 0.5;
+        }
+
+        #goToTop:hover {
+          opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="cover">
+        <section class="absolute full">
+            <section class="container text-white pt-5">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary  mt-1 border rounded-4">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">
+
+                        <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 3840 2160"
+                        version="1.1"
+                        id="svg1"
+                        inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+                        sodipodi:docname="part.svg"
+                        inkscape:export-filename="logo.png"
+                        inkscape:export-xdpi="16.1"
+                        inkscape:export-ydpi="16.1"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:svg="http://www.w3.org/2000/svg">
+                       <sodipodi:namedview
+                          id="namedview1"
+                          pagecolor="#ffffff"
+                          bordercolor="#000000"
+                          borderopacity="0.25"
+                          inkscape:showpageshadow="2"
+                          inkscape:pageopacity="0.0"
+                          inkscape:pagecheckerboard="0"
+                          inkscape:deskcolor="#d1d1d1"
+                          inkscape:document-units="px"
+                          inkscape:zoom="0.31792788"
+                          inkscape:cx="1814.877"
+                          inkscape:cy="1061.5615"
+                          inkscape:window-width="1920"
+                          inkscape:window-height="1029"
+                          inkscape:window-x="0"
+                          inkscape:window-y="27"
+                          inkscape:window-maximized="1"
+                          inkscape:current-layer="layer1"
+                          inkscape:pageshadow="2"
+                          showgrid="false" />
+                       <defs
+                          id="defs1" />
+                       <g
+                          inkscape:groupmode="layer"
+                          id="layer3"
+                          inkscape:label="Layer 3" />
+                       <g
+                          inkscape:label="Layer 1"
+                          inkscape:groupmode="layer"
+                          id="layer1">
+                         <path
+                            style="stroke:#ff0066;stroke-width:324.187;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+                            d="M 2953.9906,695.63128 C 1303.8888,1622.7463 2568.6323,161.00999 818.16453,1119.3574"
+                            id="path8"
+                            sodipodi:nodetypes="cc" />
+                       </g>
+                       <g
+                          inkscape:groupmode="layer"
+                          id="layer2"
+                          inkscape:label="Layer 2">
+                         <path
+                            style="stroke:#ff0066;stroke-width:324.187;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+                            d="M 2885.0098,1136.4778 C 1234.908,2063.5929 2499.6515,601.8566 749.1838,1560.204"
+                            id="path8-9"
+                            sodipodi:nodetypes="cc" />
+                       </g>
+                     </svg>
+
+                      </a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#features">Features</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#copy">Snippets & Installation</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#author">Author & License</a>
+                          </li>
+                          <li class="nav-item">
+                            <div class="form-check nav-link form-switch ms-5">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked1" checked>
+                              <label class="form-check-label" for="flexSwitchCheckChecked1">Toggle Demo</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </nav>
+            </section>
+    
+            <section class="container mt-2 pt-3 text-center">
+                
+                <img src="assets/images/logo.png" class="img-fluid" alt="ErrorN Logo">
+                <p class="display-0 text-indigo m-5">Bootstrap CSS <strong>Toast Messages Simplified</strong></p>
+                
+            </section>
+    
+            <section class="container pt-1">
+                
+                <section class="row">
+                  <section class="col-4"></section>
+                  <section class="col-4">
+
+                    <div class="form-check text-black form-switch text-center">
+                      <label style="font-size: 2.5vw; position: relative; top: -5vh;">Toggle Demo</label>
+                    </div>
+
+                  </section>
+                  <section class="col-4"></section>
+                </section>
+                <section class="row">
+                  <section class="col-6"></section>
+                  <section class="col-1">
+
+                    <div class="form-check nav-link form-switch text-center">
+                      <input class="form-check-input form-control" type="checkbox" role="switch" id="flexSwitchCheckChecked0" checked style="transform: scale(3.8); margin-left: -0vw;">
+                    </div>
+
+                  </section>
+                  <section class="col"></section>
+                </section>
+                
+            </section>
+        </section>
+    </section>
+    
+    <section id="features" class="full-flexible-height">
+      <section class="container py-5 my-5">
+          <section class="row">
+              <section class="col-lg-1"></section>
+              <section class="col-lg-4 display-4"><h1 class="text-indigo text-decoration-underline">Simple:</h1>
+                <p class="display-2"><span class="text-primary-emphasis">Show notifications,</span> <span class="text-warning"></span> <span class="text-secondary-emphasis display-2">that disappear automatically,</span> <span class="text-primary-emphasis">with one JS call</span>.</p>
+              </section>
+              <section class="col-lg-7">
+                <img src="assets/images/demoCode.png" class="img-fluid" alt="">
+              </section>
+          </section>
+      </section>
+    </section>
+    
+    <section class="full-flexible-height bg-indigo text-primary-emphasis">
+      <section class="container py-5 my-5">
+          <section class="row pb-5">
+              <section class="col-lg-7 pe-5">
+
+                <div class="toast demo align-items-center text-bg-primary border-0 w-100" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                  <div class="d-flex">
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" aria-label="Close"></button>
+                  </div>
+                </div>
+                <div class="toast mt-5 demo align-items-center border-0 w-100" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                  <div class="toast-header text-bg-primary">
+                    <strong class="me-auto">This is a toast</strong>
+                    <small>Primary message</small>
+                    <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                </div>
+
+                <div class="toast mt-5 demo align-items-center text-bg-warning border-0 w-100" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                  <div class="d-flex">
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" aria-label="Close"></button>
+                  </div>
+                </div>
+                <div class="toast mt-5 demo align-items-center border-0 w-100" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                  <div class="toast-header text-bg-warning">
+                    <strong class="me-auto">This is a toast</strong>
+                    <small>Warning message</small>
+                    <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                </div>
+
+                <div class="toast mt-5 demo align-items-center text-bg-danger border-0 w-100" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                  <div class="d-flex">
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" aria-label="Close"></button>
+                  </div>
+                </div>
+                <div class="toast mt-5 demo align-items-center border-0 w-100" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                  <div class="toast-header text-bg-danger">
+                    <strong class="me-auto">This is a toast</strong>
+                    <small>Danger message</small>
+                    <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                </div>
+              </section>
+              <section class="col-lg-4 pt-5">
+                <p class="display-1"><span class="text-primary-emphasis">Notifications </span> <span class="text-warning"></span> <span class="text-secondary-emphasis display-2">in a smaller and larger toast form</span>. <span class="text-primary-emphasis">Simple & Familiar.</span></p>
+              </section>
+          </section>
+      </section>
+    </section>
+    
+    <section class="full-flexible-height">
+      <section class="container py-5 my-5">
+          <section class="row">
+              <section class="col-lg-12"><h1 class="text-indigo">Made with Bootstrap in Mind</h1>
+                <p class="display-2"><span class="text-primary-emphasis">Using the one <strong>CSS Framework</strong> you love!</span></p>
+              </section>
+          </section>
+          <section class="row">
+              <section class="col-5 text-center m-5">
+                <img src="assets/images/smallLogo.svg" class="img-fluid mt-5" alt="">
+              </section>
+              <section class="col-5 text-center m-5">
+                <img src="assets/images/bootstrap-logo-shadow.png" class="img-fluid mt-5" alt="">
+              </section>
+          </section>
+      </section>
+    </section>
+    
+    <section id="copy" class="full-flexible-height bg-danger">
+      <section class="container py-5 my-5">
+          <section class="row">
+              <section class="col-lg-12">
+                <p class="display-1"><span class="text-primary-emphasis">Snippets & Installation</span></p>
+                <p class="display-3"><span class="text-primary-emphasis"><strong>Copy</strong> what you need!</span></p>
+              </section>
+          </section>
+          <section class="row">
+              <section class="col m-5">
+
+                <p class="display-4">Bootstrap CSS & JS</p>
+                <p>You must include Bootstrap css and js, whether local or online. If the link below becomes outdated, you can go to <a href="https://getbootstrap.com">getbootstrap.com</a> to get the current link. <strong>At the time of publishing, the supported version of Bootstrap is 5.3.2</strong> .</p>
+                <p>You must include the <strong>ErrorN JavaScript code</strong>, whether local or online; this one is the second script component shown below. Download it from here: <a href="/assets/js/ErrorN.min.js">ErrorN.min.js</a>.</p>
+
+                <div class="bd-clipboard"><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre><code class="language-html"><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;</span>
+    <span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span>
+    <span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"ErrorN.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></div>
+
+                <p class="display-4">Code Snippets</p>
+                <p>Copy the snippet you need for your specific case.</p>
+              
+                <p class="display-6">Locate the notification toast in the <span class="text-decoration-underline">upper right corner</span></p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Locate the notification toast in the upper right corner. This is the default value when no "setPosition" method is called.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">setPositionTopRight</span><span class="p">(</span><span class="s1"></span><span class="p">)</span><span class="p">;</span></span></span></code></pre></div>
+              
+                <p class="display-6">Locate the notification toast in the <span class="text-decoration-underline">upper left corner</span></p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Locate the notification toast in the upper left corner.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">setPositionTopLeft</span><span class="p">(</span><span class="s1"></span><span class="p">)</span><span class="p">;</span></span></span></code></pre></div>
+              
+                <p class="display-6">Locate the notification toast in the <span class="text-decoration-underline">lower right corner</span></p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Locate the notification toast in the lower right corner.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">setPositionBottomRight</span><span class="p">(</span><span class="s1"></span><span class="p">)</span><span class="p">;</span></span></span></code></pre></div>
+              
+                <p class="display-6">Locate the notification toast in the <span class="text-decoration-underline">lower left corner</span></p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Locate the notification toast in the lower left corner.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">setPositionBottomLeft</span><span class="p">(</span><span class="s1"></span><span class="p">)</span><span class="p">;</span></span></span></code></pre></div>
+              
+                <p class="display-6">Locate the notification toast in the <span class="text-decoration-underline">center</span> of the screen</p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Locate the notification toast in the center.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">setPositionCenter</span><span class="p">(</span><span class="s1"></span><span class="p">)</span><span class="p">;</span></span></span></code></pre></div>
+              
+                <p class="display-6">Display an <span class="text-decoration-underline">error</span> notification</p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an error notification using a simple 
+format without the duration of the message on the screen.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">"message"</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an error notification using a simple 
+format with the duration of the message on the screen, 
+in milliseconds (9000 is the default).*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">"message", 9000</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an error notification using a complex 
+  format without the duration of the message on the screen.*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">"message", "main title", "small text"</span><span class="p">);</span><span></span></code></pre></div>
+                  <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an error notification using a complex 
+  format with the duration of the message on the screen, 
+  in milliseconds (9000 is the default).*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">"message", "main title", "small text", 9000</span><span class="p">);</span><span></span></code></pre></div>
+              
+                <p class="display-6">Display a <span class="text-decoration-underline">warning</span> notification</p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a warning notification using a simple 
+format without the duration of the message on the screen.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">warning</span><span class="p">(</span><span class="s1">"message"</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a warning notification using a simple 
+format with the duration of the message on the screen, 
+in milliseconds (9000 is the default).*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">warning</span><span class="p">(</span><span class="s1">"message", 9000</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a warning notification using a complex 
+  format without the duration of the message on the screen.*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">warning</span><span class="p">(</span><span class="s1">"message", "main title", "small text"</span><span class="p">);</span><span></span></code></pre></div>
+                  <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a warning notification using a complex 
+  format with the duration of the message on the screen, 
+  in milliseconds (9000 is the default).*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">warning</span><span class="p">(</span><span class="s1">"message", "main title", "small text", 9000</span><span class="p">);</span><span></span></code></pre></div>
+              
+                <p class="display-6">Display a <span class="text-decoration-underline">success</span> notification</p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a success notification using a simple 
+format without the duration of the message on the screen.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s1">"message"</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a success notification using a simple 
+format with the duration of the message on the screen, 
+in milliseconds (9000 is the default).*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s1">"message", 9000</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a success notification using a complex 
+  format without the duration of the message on the screen.*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s1">"message", "main title", "small text"</span><span class="p">);</span><span></span></code></pre></div>
+                  <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a success notification using a complex 
+  format with the duration of the message on the screen, 
+  in milliseconds (9000 is the default).*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s1">"message", "main title", "small text", 9000</span><span class="p">);</span><span></span></code></pre></div>
+              
+                <p class="display-6">Display an <span class="text-decoration-underline">info</span> notification</p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an info notification using a simple 
+format without the duration of the message on the screen.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">"message"</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an info notification using a simple 
+format with the duration of the message on the screen, 
+in milliseconds (9000 is the default).*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">"message", 9000</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an info notification using a complex 
+  format without the duration of the message on the screen.*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">"message", "main title", "small text"</span><span class="p">);</span><span></span></code></pre></div>
+                  <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an info notification using a complex 
+  format with the duration of the message on the screen, 
+  in milliseconds (9000 is the default).*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">"message", "main title", "small text", 9000</span><span class="p">);</span><span></span></code></pre></div>
+                  
+                <p class="display-6">Display a <span class="text-decoration-underline">primary</span> notification</p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a primary notification using a simple 
+format without the duration of the message on the screen.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">primary</span><span class="p">(</span><span class="s1">"message"</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a primary notification using a simple 
+format with the duration of the message on the screen, 
+in milliseconds (9000 is the default).*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">primary</span><span class="p">(</span><span class="s1">"message", 9000</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a primary notification using a complex 
+  format without the duration of the message on the screen.*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">primary</span><span class="p">(</span><span class="s1">"message", "main title", "small text"</span><span class="p">);</span><span></span></code></pre></div>
+                  <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays a primary notification using a complex 
+  format with the duration of the message on the screen, 
+  in milliseconds (9000 is the default).*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">primary</span><span class="p">(</span><span class="s1">"message", "main title", "small text", 9000</span><span class="p">);</span><span></span></code></pre></div>
+
+                  
+                <p class="display-6">Display an <span class="text-decoration-underline">indigo colored</span> notification</p>
+                <div class="bd-clipboard" ><button class="btn-clipboard d-none" title="" data-original-title="Copy to clipboard">Copy</button></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an indigo colored notification using a simple 
+format without the duration of the message on the screen.*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">indigo</span><span class="p">(</span><span class="s1">"message"</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an indigo colored notification using a simple 
+format with the duration of the message on the screen, 
+in milliseconds (9000 is the default).*/
+<span class="nb">ErrorN</span><span class="p">.</span><span class="nx">indigo</span><span class="p">(</span><span class="s1">"message", 9000</span><span class="p">);</span><span></span></code></pre></div>
+                <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an indigo colored notification using a complex 
+  format without the duration of the message on the screen.*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">indigo</span><span class="p">(</span><span class="s1">"message", "main title", "small text"</span><span class="p">);</span><span></span></code></pre></div>
+                  <div class="highlight fs-5 p-5 m-5"><pre tabindex="0" class="chroma"></pre><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">/*Displays an indigo colored notification using a complex 
+  format with the duration of the message on the screen, 
+  in milliseconds (9000 is the default).*/
+  <span class="nb">ErrorN</span><span class="p">.</span><span class="nx">indigo</span><span class="p">(</span><span class="s1">"message", "main title", "small text", 9000</span><span class="p">);</span><span></span></code></pre></div>
+
+              </section>
+          </section>
+      </section>
+    </section>
+
+    <section id="author" class="full-flexible-height">
+      <section class="container py-5 my-5">
+          <section class="row">
+              <section class="col-lg-12"><h1 class="text-indigo">Author and License</h1>
+              </section>
+          </section>
+          <section class="row">
+              <section class="col-4 m-5">
+                <div class="card w-100 text-bg-primary">
+                  <div class="card-img-top text-center display-1">
+                    CC BY-NC-SA 4.0
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Licence</h5>
+                    <p class="card-text">This software is published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.</p>
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="btn btn-warning bg-indigo form-control">See license</a>
+                  </div>
+                </div>
+                <p class="lead"></p>
+              </section>
+              <section class="col-6 mt-5">
+                <p class="display-5">ErrorN&copy; <em>(pronounced "error-en")</em> 2023 by José Inestroza, is licensed under Attribution-NonCommercial-ShareAlike 4.0 International </p>
+
+                <p>You may use this software in your business app, but <strong>ErrorN cannot be primarily intended for commercial advantage  or monetary compensation</strong> as part of you software. <strong>You cannot sell ErrorN or a modified version of ErrorN.</strong></p>
+              </section>
+              
+          </section>
+      </section>
+    </section>
+
+    <button onclick="goToTop()" id="goToTop" title="Go to top" style="transform: scale(1.8);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+    </svg></button>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/ErrorN.min.js"></script>
+    <script src="assets/js/demo.min.js"></script>
+    <script src="assets/js/docs.min.js"></script>
+</body>
+</html>
