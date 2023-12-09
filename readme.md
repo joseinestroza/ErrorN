@@ -1,4 +1,8 @@
 
+<div style="text-align: center;">
+    <img src="assets/images/logo.png" style="width: 50%;">
+</div>
+
 # ErrorN: Error Notificator using Bootstrap
 ErrorN (copyright) 2023 by Jose Inestroza is licensed under  
 Attribution-NonCommercial-ShareAlike 4.0 International 
@@ -58,6 +62,10 @@ Error Notificator using Bootstrap 5.3.1.
 ```
 
 ## Author
+<div style="text-align: center;">
+    <img src="assets/images/smallLogo.svg" style="width: 25%;">
+</div>
+
 - **Author:** @joseinestroza, https://github.com/joseinestroza
 - **Date:** 2023/12/08
 - **Since:** 2023/12/07
