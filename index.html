@@ -2,14 +2,18 @@
 <html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="@joseinestroza">
+    <meta name="date" content="2023/12/08">
+    <meta name="version" content="0.1.1.2332">
+    <meta name="description" content="ErrorN (Error Notification Library) Web Site">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ErrorN</title>
     <link rel="shortcut icon" href="assets/images/smallLogo.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/docs.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <style>
         *{
             margin: 0;
@@ -51,12 +55,12 @@
 
         .text-indigo{
 
-            color: var(--bs-indigo);
+            color: var(--bs-indigo) !important;
         }
 
         .bg-indigo{
 
-            background-color: var(--bs-indigo);
+            background-color: var(--bs-indigo) !important;
         }
         
         .display-0{
@@ -95,7 +99,7 @@
     <section class="cover">
         <section class="absolute full">
             <section class="container text-white pt-5">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary  mt-1 border rounded-4">
+                <nav class="navbar fixed navbar-expand-lg bg-body-tertiary mt-1 border rounded-4">
                     <div class="container-fluid">
                       <a class="navbar-brand" href="#">
 
@@ -180,7 +184,7 @@
                           </li>
                           <li class="nav-item">
                             <div class="form-check nav-link form-switch ms-5">
-                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked1" checked>
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked1">
                               <label class="form-check-label" for="flexSwitchCheckChecked1">Toggle Demo</label>
                             </div>
                           </li>
@@ -215,7 +219,7 @@
                   <section class="col-1">
 
                     <div class="form-check nav-link form-switch text-center">
-                      <input class="form-check-input form-control" type="checkbox" role="switch" id="flexSwitchCheckChecked0" checked style="transform: scale(3.8); margin-left: -0vw;">
+                      <input class="form-check-input form-control" type="checkbox" role="switch" id="flexSwitchCheckChecked0" style="transform: scale(3.8); margin-left: -0vw;">
                     </div>
 
                   </section>
